@@ -1,0 +1,23 @@
+{
+  "name": "typescriptjass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codediy/ts-war3-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codediy/ts-war3-tool/issues"
+  },
+  "homepage": "https://github.com/codediy/ts-war3-tool#readme",
+  "dependencies": {
+    "@types/node": "^14.0.14",
+    "typescript": "^3.9.6"
+  }
+}
