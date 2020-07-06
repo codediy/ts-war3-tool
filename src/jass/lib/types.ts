@@ -1,14 +1,27 @@
+/* boolean */
+export interface code {
+}
+
+export interface handle {
+}
+
+export type nothing = null;
+export type integer = number;
+export type real = number;
+/* string */
+
+/* 复合类型 */
 export enum Jass_Type {
     Jass_Boolean = "boolean",
     Jass_Code = "code",
     Jass_Handle = "handle",
     Jass_Integer = "integer",
-    Jass_Real  = "real",
+    Jass_Real = "real",
     Jass_String = "string",
 
     Jass_Ability = "ability",
     Jass_Agent = "agent",
-    Jass_AiDifficulty= "aidifficulty",
+    Jass_AiDifficulty = "aidifficulty",
     Jass_AllianceType = "alliancetype",
     Jass_AttackType = "attacktype",
     Jass_BlendMode = "blendmode",
@@ -64,14 +77,14 @@ export enum Jass_Type {
     Jass_PlayerUnitEvent = "playerunitevent",
     Jass_Quest = "quest",
     Jass_QuestItem = "questitem",
-    Jass_Race ="race",
+    Jass_Race = "race",
     Jass_RacePreference = "recepreference",
     Jass_RarityControl = "raritycontrol",
     Jass_Rect = "rect",
     Jass_Region = "region",
     Jass_Sound = "sound",
     Jass_SoundType = "soundtype",
-    Jass_StartLocPrio = "statrlocprio",
+    Jass_StartLocPrio = "startlocprio",
     Jass_TerraindeFormation = "terraindeformation",
     Jass_TexMapFlags = "texmapflags",
     Jass_TextTag = "texttag",
