@@ -1234,18 +1234,478 @@ export declare function Jass_Native_GetExpiredTimer(): timer;
 export declare function Jass_Native_CreateGroup(): group;
 
 export declare function Jass_Native_DestroyGroup(
-    whichGroup
+    whichGroup: group
 ): nothing;
 
-export declare function Jass_Native_();
-export declare function Jass_Native_();
+export declare function Jass_Native_GroupAddUnit(
+    whichGroup: group,
+    whichUnit: unit
+): nothing;
+
+export declare function Jass_Native_GroupRemoveUnit(
+    whichGroup: group,
+    whichUnit: unit
+): nothing;
+
+export declare function Jass_Native_GroupClear(
+    whichGroup: group
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsOfType(
+    whichGroup: group,
+    unitname: string,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsOfPlayer(
+    whichGroup: group,
+    whichPlayer: player,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsOfTypeCounted(
+    whichGroup: group,
+    unitname: string,
+    filter: boolexpr,
+    countLimit: integer
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsInRect(
+    whichGroup: group,
+    r: rect,
+    filter: boolexpr,
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsInRectCounted(
+    whichGroup: group,
+    r: rect,
+    filter: boolexpr,
+    countLimit: integer
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsInRange(
+    whichGroup: group,
+    x: real,
+    y: real,
+    radius: real,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsInRangeOfLoc(
+    whichGroup: group,
+    whichLocation: location,
+    radius: real,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsInRangeOfLocCounted(
+    whichGroup: group,
+    whichLocation: location,
+    radius: real,
+    filter: boolexpr,
+    countLimit: integer
+): nothing;
+
+export declare function Jass_Native_GroupEnumUnitsSelected(
+    whichGroup: group,
+    whichPlayer: player,
+    filter: boolexpr,
+): nothing;
+
+
+export declare function Jass_Native_GroupImmediateOrder(
+    whichGroup: group,
+    order: string
+): boolean;
+
+export declare function Jass_Native_GroupImmediateOrderById(
+    whichGroup: group,
+    order: integer
+): boolean;
+
+export declare function Jass_Native_GroupPointOrder(
+    whichGroup: group,
+    order: string,
+    whichLocation: location,
+): boolean;
+
+export declare function Jass_Native_GroupPointOrderLoc(
+    whichGroup: group,
+    order: string,
+    whichLocation: location
+): boolean;
+
+export declare function Jass_Native_GroupPointOrderById(
+    whichGroup: group,
+    order: integer,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_GroupPointOrderByIdLoc(
+    whichGroup: group,
+    order: integer,
+    whichLocation: location
+): boolean;
+
+export declare function Jass_Native_GroupTargetOrder(
+    whichGroup: group,
+    order: string,
+    targetWidget: widget
+): boolean;
+
+export declare function Jass_Native_GroupTargetOrderById(
+    whichGroup: group,
+    order: integer,
+    targetWidget: widget
+): boolean;
+
+export declare function Jass_Native_ForceGroup(
+    whichGroup: group,
+    callback: code
+): nothing;
+
+export declare function Jass_Native_FirstOfGroup(
+    whichGroup: group,
+): unit;
+
+
+/*Force Api*/
+export declare function Jass_Native_CreateForce(): force;
+
+export declare function Jass_Native_DestroyForce(
+    whichForce: force
+): nothing;
+
+export declare function Jass_Native_ForceAddPlayer(
+    whichForce: force,
+    whichPlayer: player
+): nothing;
+
+export declare function Jass_Native_ForceRemovePlayer(
+    whichForce: force,
+    whichPlayer: player
+): nothing;
+
+export declare function Jass_Native_ForceClear(
+    whichForce: force,
+): nothing;
+
+export declare function Jass_Native_ForceEnumPlayers(
+    whichForce: force,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_ForceEnumPlayersCounted(
+    whichForce: force,
+    filter: boolexpr,
+    countLimit: integer
+): nothing;
+
+export declare function Jass_Native_ForceEnumAllies(
+    whichForce: force,
+    whichPlayer: player,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_ForceEnumEnemies(
+    whichForce: force,
+    whichPlayer: player,
+    filter: boolexpr
+): nothing;
+
+export declare function Jass_Native_ForForce(
+    whichForce: force,
+    callback: code
+): nothing;
+
+
+export declare function Jass_Native_Rect(
+    minx: real,
+    miny: real,
+    maxx: real,
+    maxy: real
+): rect;
+
+export declare function Jass_Native_RectFromLoc(
+    min: location,
+    max: location
+): rect;
+
+export declare function Jass_Native_RemoveRect(
+    whichRect: rect
+): nothing;
+
+export declare function Jass_Native_SetRect(
+    whichRect: rect,
+    minx: real,
+    miny: real,
+    maxx: real,
+    maxy: real
+): nothing;
+
+export declare function Jass_Native_SetRectFromLoc(
+    whichRect: rect,
+    min: location,
+    max: location
+): nothing;
+
+export declare function Jass_Native_MoveRectTo(
+    whichRect: rect,
+    newCenterX: real,
+    newCenterY: real
+): nothing;
+
+export declare function Jass_Native_MoveREctToLoc(
+    whichRect: rect,
+    newCenterLoc: location
+): nothing;
+
+export declare function Jass_Native_GetRectCenterX(
+    whichRect: rect,
+): real;
+
+export declare function Jass_Native_GetRectCenterY(
+    whichRect: rect,
+): real;
+
+export declare function Jass_Native_GetRectMinX(
+    whichRect: rect,
+): real;
+
+export declare function Jass_Native_GetRectMinY(
+    whichRect: rect,
+): real;
+
+export declare function Jass_Native_GetRectMaxX(
+    whichRect: rect,
+): real;
+
+export declare function Jass_Native_GetRectMaxY(
+    whichRect: rect,
+): real;
+
+
+export declare function Jass_Native_CreateRegion(): region;
+
+export declare function Jass_Native_RemoveRegion(
+    whichRegion: region
+): nothing;
+
+export declare function Jass_Native_RegionAddRect(
+    whichRegion: region,
+    r: rect
+): nothing;
+
+export declare function Jass_Native_RegionClearRect(
+    whichRegion: region,
+    r: rect
+): nothing;
+
+export declare function Jass_Native_RegionAddCell(
+    whichRegion: region,
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_RegionAddCellAtLoc(
+    whichRegion: region,
+    whichLocation: location
+): nothing;
+
+export declare function Jass_Native_RegionClearCell(
+    whichRegion: region,
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_RegionClearCellAtLoc(
+    whichRegion: region,
+    whichLocation: location
+): nothing;
+
+export declare function Jass_Native_Location(
+    x: real,
+    y: real
+): location;
+
+export declare function Jass_Native_RemoveLocation(
+    whichLocation: location
+): nothing;
+
+export declare function Jass_Native_MoveLocation(
+    whichLocation: location,
+    newX: real,
+    newY: real
+): nothing;
+
+export declare function Jass_Native_GetLocationX(
+    whichLocation: location,
+): real;
+
+export declare function Jass_Native_GetLocationY(
+    whichLocation: location,
+): real;
+
+export declare function Jass_Native_GetLocationZ(
+    whichLocation: location,
+): real;
+
+export declare function Jass_Native_IsUnitInRegion(
+    whichRegion: region,
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Native_IsPointInRegion(
+    whichRegion: region,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IsLocationInRegion(
+    whichRegion: region,
+    whichLocation: location
+): boolean;
+
+export declare function Jass_Native_GetWorldBounds(): rect;
+
+/*Trigger*/
+export declare function Jass_Native_CreateTrigger(): trigger;
+
+export declare function Jass_Native_DestroyTrigger(
+    whichTrigger: trigger
+): nothing;
+
+export declare function Jass_Native_ResetTrigger(
+    whichTrigger: trigger
+): nothing;
+
+export declare function Jass_Native_EnableTrigger(
+    whichTrigger: trigger
+): nothing;
+
+export declare function Jass_Native_DisableTrigger(
+    whichTrigger: trigger
+): nothing;
+
+export declare function Jass_Native_IsTriggerEnabled(
+    whichTrigger: trigger
+): boolean;
+
+export declare function Jass_Native_TriggerWaitOnSleeps(
+    whichTrigger: trigger,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_IsTriggerWaitOnSleeps(
+    whichTrigger: trigger,
+): boolean;
+
+export declare function Jass_Constant_Native_GetFilterUnit(): unit;
+
+export declare function Jass_Constant_Native_GetEnumUnit(): unit;
+
+export declare function Jass_Constant_Native_GetFilterDestructable(): destructable;
+
+export declare function Jass_Constant_Native_GetEnumDestructable(): destructable;
+
+export declare function Jass_Constant_Native_GetFilterItem(): item;
+
+export declare function Jass_Constant_Native_GetEnumPlayer(): item;
+
+export declare function Jass_Constant_Native_GetFilterPlayer(): player;
+
+export declare function Jass_Constant_Native_GetEnumPlayer(): player;
+
+export declare function Jass_Constant_Native_GetTriggeringTrigger(): trigger;
+
+export declare function Jass_Constant_Native_GetTriggerEventId(): eventid;
+
+export declare function Jass_Constant_Native_GetTriggerEvalCount(
+    whichTrigger: trigger
+): integer;
+
+export declare function Jass_Constant_Native_GetTriggerExecCount(
+    whichTrigger: trigger
+): integer;
+
+export declare function Jass_Native_ExecuteFunc(
+    funcName: string
+): nothing;
+
+/*Boolean*/
+
+export declare function Jass_Native_Add(
+    operandA: boolexpr,
+    operandB: boolexpr,
+): boolexpr;
+
+export declare function Jass_Native_Or(
+    operandA: boolexpr,
+    operandB: boolexpr,
+): boolexpr;
+
+export declare function Jass_Native_Not(
+    operand: boolexpr,
+): boolexpr;
+
+export declare function Jass_Native_Condition(
+    func: code
+): conditionfuncs;
+
+export declare function Jass_Native_DestroyCondition(
+    c: conditionfuncs
+): nothing;
+
+export declare function Jass_Native_Filter(
+    func: code
+): filterfunc;
+
+export declare function Jass_Native_DestroyFilter(
+    f: filterfunc
+): nothing;
+
+export declare function Jass_Native_DestroyBoolExpr(
+    e: boolexpr
+): nothing;
+
+/*Trigger GameEvent*/
+export declare function Jass_Native_TriggerRegisterVariableEvent(
+    whichTrigger: trigger,
+    varName: string,
+    opcode: limitop,
+    limitval: real
+): event;
+
+export declare function Jass_Native_TriggerRegisterTimerEvent(
+
+);
+
+export declare function Jass_Native_TriggerRegisterTimerExpireEvent();
+
+export declare function Jass_Native_TriggerRegisterGameStateEvent();
+
+export declare function Jass_Native_TriggerRegisterDialogEvent();
+
+export declare function Jass_Native_TriggerRegisterDialogButtonEvent();
 
 export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
 
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
+
+
+
+
+
+
+
+
+
+
