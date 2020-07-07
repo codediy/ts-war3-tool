@@ -3555,10 +3555,238 @@ export declare function Jass_Native_CachePlayerHeroData(
     whichPlayer: player
 ): nothing;
 
+/*Fog*/
 
+export declare function Jass_Native_SetFogStateRect(
+    whichPlayer: player,
+    whichState: fogstate,
+    where: rect,
+    useSharedVision: boolean
+): nothing;
 
+export declare function Jass_Native_SetFogStateRadius(
+    whichPlayer: player,
+    whichState: fogstate,
+    centerX: real,
+    centerY: real,
+    radius: real,
+    useSharedVision: boolean
+): nothing;
 
+export declare function Jass_Native_SetFogStateRadiusLoc(
+    whichPlayer: player,
+    whichState: fogstate,
+    center: location,
+    radius: real,
+    useSharedVision: boolean
+): nothing;
 
+export declare function Jass_Native_FogMaskEnable(
+    enable: boolean
+): nothing;
+
+export declare function Jass_Native_IsFogMaskEnabled(): boolean;
+
+export declare function Jass_Native_FogEnable(
+    enable: boolean
+): nothing;
+
+export declare function Jass_Native_IsFogEnabled(): boolean;
+
+export declare function Jass_Native_CreateFogModifierRect(
+    whichPlayer: player,
+    whichState: fogstate,
+    where: rect,
+    useSharedVision: boolean,
+    afterUnits: boolean
+): fogmodifier;
+
+export declare function Jass_Native_CreateFogModifierRadius(
+    whichPlayer: player,
+    whichState: fogstate,
+    centerX: real,
+    centerY: real,
+    radius: real,
+    useSharedVision: boolean,
+    afterUnits: boolean
+): fogmodifier;
+
+export declare function Jass_Native_CreateFogModifierRadiusLoc(
+    whichPlayer: player,
+    whichState: fogstate,
+    center: location,
+    radius: real,
+    useSharedVision: boolean,
+    afterUnits: boolean
+): fogmodifier;
+
+export declare function Jass_Native_DestroyFogModifier(
+    whichFoModifier: fogmodifier
+): nothing;
+
+export declare function Jass_Native_FogModifierStart(
+    whichFoModifier: fogmodifier
+): nothing;
+
+export declare function Jass_Native_FogModifierStop(
+    whichFoModifier: fogmodifier
+): nothing;
+
+/*Game*/
+export declare function Jass_Native_VersionGet(): version;
+
+export declare function Jass_Native_VersionCompatible(
+    whichVersion: version
+): boolean;
+
+export declare function Jass_Native_VersionSupported(
+    whichVersion: version
+): boolean;
+
+export declare function Jass_Native_EndGame(
+    doScoreScreen: boolean
+): nothing;
+
+export declare function Jass_Native_ChangeLevel(
+    newLevel: string,
+    doScoreScreen: boolean
+): nothing;
+
+export declare function Jass_Native_RestartGame(
+    doScoreScreen: boolean
+): nothing;
+
+export declare function Jass_Native_ReloadGame(): nothing;
+
+export declare function Jass_Native_SetCampaignMenuRace(
+    r: race
+): nothing;
+
+export declare function Jass_Native_SetCampaignMenuRaceEx(
+    campaignIndex: integer
+): nothing;
+
+export declare function Jass_Native_ForceCampaignSelectScreen(): nothing;
+
+export declare function Jass_Native_LoadGame(
+    saveFileName: string,
+    doScoreScreen: boolean
+): nothing;
+
+export declare function Jass_Native_SaveGame(
+    saveFileName: string
+): nothing;
+
+export declare function Jass_Native_RenameSaveDirectory(
+    sourceDirName: string,
+    destDirName: string
+): boolean;
+
+export declare function Jass_Native_RemoveSaveDirectory(
+    sourceDirName: string
+): boolean;
+
+export declare function Jass_Native_CopySaveGame(
+    sourceSaveName: string,
+    destSaveName: string
+): boolean;
+
+export declare function Jass_Native_SaveGameExists(
+    saveName: string
+): boolean;
+
+export declare function Jass_Native_SyncSelections(): nothing;
+
+export declare function Jass_Native_SetFloatGameState(
+    whichFloatGameState: fgamestate,
+    value: real
+): nothing;
+
+export declare function Jass_Constant_Native_GetFloatGameState(
+    whichFloatGameState: fgamestate,
+): real;
+
+export declare function Jass_Native_SetIntegerGameState(
+    whichFloatGameState: fgamestate,
+    value: integer
+): nothing;
+
+export declare function Jass_Constant_Native_GetIntegerGameState(
+    whichFloatGameState: fgamestate,
+): integer;
+
+/*Campain*/
+export declare function Jass_Native_SetTutorialCleared(
+    cleared: boolean
+): nothing;
+
+export declare function Jass_Native_SetMissionAvailable(
+    campaignNumber: integer,
+    missionNumber: integer,
+    available: boolean
+): nothing;
+
+export declare function Jass_Native_SetCampaignAvailable(
+    campaignNumber: integer,
+    available: boolean
+): nothing;
+
+export declare function Jass_Native_SetOpCinematicAvailable(
+    campaignNumber: integer,
+    available: boolean
+): nothing;
+
+export declare function Jass_Native_SetEdCinematicAvailable(
+    campaignNumber: integer,
+    available: boolean
+): nothing;
+
+export declare function Jass_Native_GetDefaultDifficulty(): gamedifficulty;
+
+export declare function Jass_Native_SetDefaultDifficulty(
+    g: gamedifficulty
+): nothing;
+
+export declare function Jass_Native_SetCustomCampaignButtonVisible(
+    whichButton: integer,
+    visible: boolean
+): nothing;
+
+export declare function Jass_Native_GetCustomCampaignButtonVisible(
+    whichButton: integer
+): boolean;
+
+export declare function Jass_Native_DoNotSaveReply(): nothing;
+
+/*Dialog*/
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
 
 
 
