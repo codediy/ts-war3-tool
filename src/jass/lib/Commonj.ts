@@ -4845,41 +4845,391 @@ export declare function Jass_Native_SetTextTagText(
     height: real
 ): nothing;
 
-export declare function Jass_Native_SetTextTagPos();
+export declare function Jass_Native_SetTextTagPos(
+    t: texttag,
+    x: real,
+    y: real,
+    heightOffset: real
+): nothing;
 
-export declare function Jass_Native_SetTextTagPosUnit();
+export declare function Jass_Native_SetTextTagPosUnit(
+    t: texttag,
+    whichUnit: unit,
+    heightOffset: real
+): nothing;
 
-export declare function Jass_Native_SetTextTagColor();
+export declare function Jass_Native_SetTextTagColor(
+    t: texttag,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
 
-export declare function Jass_Native_SetTextTagVelocity();
+export declare function Jass_Native_SetTextTagVelocity(
+    t: texttag,
+    xvuel: real,
+    yvel: real
+): nothing;
 
-export declare function Jass_Native_SetTextTagSuspended();
+export declare function Jass_Native_SetTextTagVisibility(
+    t: texttag,
+    flag: boolean
+): nothing;
 
-export declare function Jass_Native_SetTextTagPermanent();
+export declare function Jass_Native_SetTextTagSuspended(
+    t: texttag,
+    flag: boolean
+): nothing;
 
-export declare function Jass_Native_SetTextTagAge();
+export declare function Jass_Native_SetTextTagPermanent(
+    t: texttag,
+    flag: boolean
+): nothing;
 
-export declare function Jass_Native_SetTextTagLifeSpan();
+export declare function Jass_Native_SetTextTagAge(
+    t: texttag,
+    age: real
+): nothing;
 
-export declare function Jass_Native_SetTextTagFadepoint();
+export declare function Jass_Native_SetTextTagLifeSpan(
+    t: texttag,
+    lifespan: real
+): nothing;
 
-export declare function Jass_Native_SetReservedLocalHeroButtons();
+export declare function Jass_Native_SetTextTagFadepoint(
+    t: texttag,
+    fadepoint: real
+): nothing;
 
-export declare function Jass_Native_GetAllyColorFilterState();
+export declare function Jass_Native_SetReservedLocalHeroButtons(
+    reserved: integer
+): nothing;
 
-export declare function Jass_Native_SetAllyColorFilterState();
+export declare function Jass_Native_GetAllyColorFilterState(): integer;
 
-export declare function Jass_Native_GetCreepCampFilterState();
+export declare function Jass_Native_SetAllyColorFilterState(
+    state: integer
+): nothing;
 
-export declare function Jass_Native_SetCreepCampFilterState();
+export declare function Jass_Native_GetCreepCampFilterState(): boolean;
 
-export declare function Jass_Native_EnableMinimapFilterButtons();
+export declare function Jass_Native_SetCreepCampFilterState(
+    state: boolean
+): nothing;
 
-export declare function Jass_Native_EnableDragSelect();
+export declare function Jass_Native_EnableMinimapFilterButtons(
+    enableAlly: boolean,
+    enableCreep: boolean
+): nothing;
 
-export declare function Jass_Native_EnablePreSelect();
+export declare function Jass_Native_EnableDragSelect(
+    state: boolean,
+    ui: boolean
+): nothing;
 
-export declare function Jass_Native_EnableSelect();
+export declare function Jass_Native_EnablePreSelect(
+    state: boolean,
+    ui: boolean
+): nothing;
+
+export declare function Jass_Native_EnableSelect(
+    state: boolean,
+    ui: boolean
+): nothing;
+
+export declare function Jass_Native_CreateTrackable(
+    trackableModelPath: string,
+    x: real,
+    y: real,
+    facing: real
+): trackable;
+
+export declare function Jass_Native_CreateQuest(): quest;
+
+export declare function Jass_Native_DestroyQuest(
+    whichQuest: quest
+): nothing;
+
+export declare function Jass_Native_QuestSetTitle(
+    whichQuest: quest,
+    title: string
+): nothing;
+
+export declare function Jass_Native_QuestSetDescription(
+    whichQuest: quest,
+    description: string
+): nothing;
+
+export declare function Jass_Native_QuestSetIconPath(
+    whichQuest: quest,
+    iconPath: string
+): nothing;
+
+export declare function Jass_Native_QuestSetRequired(
+    whichQuest: quest,
+    required: boolean
+): nothing;
+
+export declare function Jass_Native_QuestSetCompleted(
+    whichQuest: quest,
+    completed: boolean
+): nothing;
+
+export declare function Jass_Native_QuestSetDiscovered(
+    whichQuest: quest,
+    discovered: boolean
+): nothing;
+
+export declare function Jass_Native_QuestSetFailed(
+    whichQuest: quest,
+    failed: boolean
+): nothing;
+
+export declare function Jass_Native_QuestSetEnabled(
+    whichQuest: quest,
+    enabled: boolean
+): nothing;
+
+export declare function Jass_Native_IsQuestRequired(
+    whichQuest: quest
+): boolean;
+
+export declare function Jass_Native_IsQuestCompleted(
+    whichQuest: quest
+): boolean;
+
+export declare function Jass_Native_IsQuestDiscovered(
+    whichQuest: quest
+): boolean;
+
+export declare function Jass_Native_IsQuestFailed(
+    whichQuest: quest
+): boolean;
+
+export declare function Jass_Native_IsQuestEnabled(
+    whichQuest: quest
+): boolean;
+
+export declare function Jass_Native_QuestCreateItem(
+    whichQuest: quest,
+): questitem;
+
+export declare function Jass_Native_QuestItemSetDescription(
+    whichQuestItem: questitem,
+    description: string
+): nothing;
+
+export declare function Jass_Native_QuestItemSetCompleted(
+    whichQuestItem: questitem,
+    completed: boolean
+): nothing;
+
+export declare function Jass_Native_IsQuestItemCompleted(
+    whichQuestItem: questitem
+): boolean;
+
+export declare function Jass_Native_CreateDefaultCondition(): defeatcondition;
+
+export declare function Jass_Native_DestroyDefeatCondition(
+    whichCondition: defeatcondition
+): nothing;
+
+export declare function Jass_Native_DefaultConditionSetDescription(
+    whichCondition: defeatcondition,
+    description: string
+): nothing;
+
+export declare function Jass_Native_CreateTimerDialog(
+    t: timer
+): timerdialog;
+
+export declare function Jass_Native_DestroyTimerDialog(
+    whichDialog: timerdialog
+): nothing;
+
+export declare function Jass_Native_TimerDialogSetTitle(
+    whichDialog: timerdialog,
+    title: string
+): nothing;
+
+export declare function Jass_Native_TimerDialogSetTitleColor(
+    whichDialog: timerdialog,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_TimerDialogTimeColor(
+    whichDialog: timerdialog,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_TimerDialogSetSpeed(
+    whichDialog: timerdialog,
+    speedMultFactor: real
+): nothing;
+
+export declare function Jass_Native_TimerDialogDisplay(
+    whichDialog: timerdialog,
+    display: boolean
+): nothing;
+
+export declare function Jass_Native_IsTimerDialogDisplayed(
+    whichDialog: timerdialog
+): boolean;
+
+export declare function Jass_Native_TimerDialogSetRealTimeRemanining(
+    whichDialog: timerdialog,
+    timeRemanining: real
+): nothing;
+
+export declare function Jass_Native_CreateLeaderboard(): leaderboard;
+
+export declare function Jass_Native_DestroyLeaderboard(
+    lb: leaderboard
+): nothing;
+
+export declare function Jass_Native_LeaderboardGetItemCount(
+    lb: leaderboard
+): integer;
+
+export declare function Jass_Native_LeaderboardSetSizeByItemCount(
+    lb: leaderboard,
+    count: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardAddItem(
+    lb: leaderboard,
+    label: string,
+    value: integer,
+    p: player
+): nothing;
+
+export declare function Jass_Native_LeaderboardRemoveItem(
+    lb: leaderboard,
+    index: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardRemovePlayerItem(
+    lb: leaderboard,
+    p: player
+): nothing;
+
+export declare function Jass_Native_LeaderboardClear(
+    lb: leaderboard
+): nothing;
+
+export declare function Jass_Native_LeaderboardSortItemsByValue(
+    lb: leaderboard,
+    ascending: boolean
+): nothing;
+
+export declare function Jass_Native_LeaderboardSortItemsByPlayer(
+    lb: leaderboard,
+    ascending: boolean
+): nothing;
+
+export declare function Jass_Native_LeaderboardSortItemsByLabel(
+    lb: leaderboard,
+    ascending: boolean
+): nothing;
+
+export declare function Jass_Native_LeaderboardHasPlayerItem(
+    lb: leaderboard,
+    p: player
+): boolean;
+
+export declare function Jass_Native_LeaderboardGetPlayerIndex(
+    lb: leaderboard,
+    p: player
+): integer;
+
+export declare function Jass_Native_LeaderboardSetLabel(
+    lb: leaderboard,
+    label: string
+): nothing;
+
+export declare function Jass_Native_LeaderboardGetLabelText(
+    lb: leaderboard
+): string;
+
+export declare function Jass_Native_PlayerSetLeaderboard(
+    toPlayer: player,
+    lb: leaderboard
+): nothing;
+
+export declare function Jass_Native_PlayerGetLeaderboard(
+    toPlayer: player
+): leaderboard;
+
+export declare function Jass_Native_LeaderboardSetLabelColor(
+    lb: leaderboard,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetValueColor(
+    lb: leaderboard,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetStyle(
+    lb: leaderboard,
+    showLabel: boolean,
+    showNames: boolean,
+    showValues: boolean,
+    showIcons: boolean
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetItemValue(
+    lb: leaderboard,
+    whichItem: integer,
+    val: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetItemLable(
+    lb: integer,
+    whichItem: integer,
+    val: string
+): nothing;
+
+export declare function Jass_Native_LeaderSetItemStyle(
+    lb: integer,
+    whichItem: integer,
+    showLable: boolean,
+    showValue: boolean,
+    showIcons: boolean
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetItemLableColor(
+    lb: integer,
+    whichItem: integer,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_LeaderboardSetItemValueColor(
+    lb: integer,
+    whichItem: integer,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_CreateMultiboard(): multiboard;
 
 export declare function Jass_Native_();
 export declare function Jass_Native_();
@@ -4887,6 +5237,24 @@ export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+export declare function Jass_Native_();
+
+
+
 
 
 
