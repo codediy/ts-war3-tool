@@ -2832,197 +2832,549 @@ export declare function Jass_Native_SetUnitUseFood(
     useFood: boolean
 ): nothing;
 
-export declare function Jass_Constant_Native_GetUnitRallyPoint();
-
-export declare function Jass_Constant_Native_GetUnitRallyUnit();
-
-export declare function Jass_Constant_Native_GetUnitRallyDestructable();
-
-export declare function Jass_Constant_Native_IsUnitInGroup();
-
-export declare function Jass_Constant_Native_IsUNitInForce();
-
-export declare function Jass_Constant_Native_IsUnitOwnedByPlayer();
-
-export declare function Jass_Constant_Native_IsUnitAlly();
-
-export declare function Jass_Constant_Native_IsUnitEnemy();
-
-export declare function Jass_Constant_Native_IsUnitVisible();
-
-export declare function Jass_Constant_Native_IsUnitDetected();
-
-export declare function Jass_Constant_Native_IsUnitInvisible();
-
-export declare function Jass_Constant_Native_IsUnitFogged();
-
-export declare function Jass_Constant_Native_IsUnitMasked();
-
-export declare function Jass_Constant_Native_IsUnitSelected();
-
-export declare function Jass_Constant_Native_IsUnitRace();
-
-export declare function Jass_Constant_Native_IsUnitType();
-
-export declare function Jass_Constant_Native_IsUnit();
-
-export declare function Jass_Constant_Native_IsUnitInRange();
-
-export declare function Jass_Constant_Native_IsUnitInRangeXY();
-
-export declare function Jass_Constant_Native_IsUnitInRangeLoc();
-
-export declare function Jass_Constant_Native_IsUnitHidden();
-
-export declare function Jass_Constant_Native_IsUnitIllusion();
-
-export declare function Jass_Constant_Native_IsUnitInTransport();
-
-export declare function Jass_Constant_Native_IsUnitLoaded();
-
-export declare function Jass_Constant_Native_IsHeroUniteId();
-
-export declare function Jass_Constant_Native_IsUnitIdType();
-
-export declare function Jass_Native_UnitShareVision();
-
-export declare function Jass_Native_UnitSuspendDecay();
-
-export declare function Jass_Native_UnitAddType();
-
-export declare function Jass_Native_UnitRemoveType();
-
-export declare function Jass_Native_UnitAddAbility();
-
-export declare function Jass_Native_UnitRemoveAbility();
-
-export declare function Jass_Native_UnitMakeAbilityPermanent();
-
-export declare function Jass_Native_UnitRemoveBuffs();
-
-export declare function Jass_Native_UnitRemoveBuffsEx();
-
-export declare function Jass_Native_UnitHasBuffsEx();
-
-export declare function Jass_Native_UnitCountBuffsEx();
-
-export declare function Jass_Native_UnitAddSleep();
-
-export declare function Jass_Native_UnitCanSleep();
-
-export declare function Jass_Native_UnitAddSleepPerm();
-
-export declare function Jass_Native_UnitCanSleepPerm();
-
-export declare function Jass_Native_UnitIsSleeping();
-
-export declare function Jass_Native_UnitWakeUp();
-
-export declare function Jass_Native_UnitApplyTimedLife();
-
-export declare function Jass_Native_UnitIgnoreAlarm();
-
-export declare function Jass_Native_UnitIgnoreAlarmToggled();
-
-export declare function Jass_Native_UnitResetCooldown();
-
-export declare function Jass_Native_UnitSetConstructionProgress();
-
-export declare function Jass_Native_UnitSetUpgradeProgress();
-
-export declare function Jass_Native_UnitPauseTimedLife();
-
-export declare function Jass_Native_UnitSetUsesAltIcon();
-
-export declare function Jass_Native_UnitDamagePoint();
-
-export declare function Jass_Native_UnitDamageTarget();
-
-export declare function Jass_Native_IssueImmediateOrder();
-
-export declare function Jass_Native_IssueImmediateOrderById();
-
-export declare function Jass_Native_IssuePointOrder();
-
-export declare function Jass_Native_IssuePointOrderLoc();
-
-export declare function Jass_Native_IssuePointOrderById();
-
-export declare function Jass_Native_IssuePointOrderByIdLoc();
-
-export declare function Jass_Native_IssueTargetOrder();
-
-export declare function Jass_Native_IssueTargetOrderById();
-
-export declare function Jass_Native_IssueInstantPointOrder();
-
-export declare function Jass_Native_IssueInstantPointOrderById();
-
-export declare function Jass_Native_IssueInstantTargetOrder();
-
-export declare function Jass_Native_IssueInstantTargetOrderById();
-
-export declare function Jass_Native_IssueBuildOrder();
-
-export declare function Jass_Native_IssueBuildOrderById();
-
-export declare function Jass_Native_IssueNeutralImmediateOrder();
-
-export declare function Jass_Native_IssueNeutralImmediateOrderById();
-
-export declare function Jass_Native_IssueNeutralPointOrder();
-
-export declare function Jass_Native_IssueNeutralPointOrderById();
-
-export declare function Jass_Native_IssueNeutralTargetOrder();
-
-export declare function Jass_Native_IssueNeutralTargetOrderById();
-
-export declare function Jass_Native_GetUnitCurrentOrder();
-
-export declare function Jass_Native_SetResourceAmount();
-
-export declare function Jass_Native_AddResourceAmount();
-
-export declare function Jass_Native_GetResourceAmount();
-
-export declare function Jass_Native_WaygateGetDestinationX();
-
-export declare function Jass_Native_WaygateGetDestinationY();
-
-export declare function Jass_Native_WaygateSetDestionation();
-
-export declare function Jass_Native_WaygateActivate();
-
-export declare function Jass_Native_WaygateIsActive();
-
-export declare function Jass_Native_AddItemToALlStock();
-
-export declare function Jass_Native_AddItemToStock();
-
-export declare function Jass_Native_AddUnitToAllStock();
-
-export declare function Jass_Native_AddUnitToStock();
-
-export declare function Jass_Native_RemoveItemFromAllStock();
-
-export declare function Jass_Native_RemoveItemFromStock();
-
-export declare function Jass_Native_RemoveUnitFromAllStock();
-
-export declare function Jass_Native_RemoveUnitFromStock();
-
-export declare function Jass_Native_SetAllItemTypeSlots();
-
-export declare function Jass_Native_SetAllUnitTypeSlots();
-
-export declare function Jass_Native_SetItemTypeSlots();
-
-export declare function Jass_Native_SetUnitTypeSlots();
-
-export declare function Jass_Native_GetUnitUserData();
-
-export declare function Jass_Native_SetUnitUserData();
+export declare function Jass_Constant_Native_GetUnitRallyPoint(
+    whichUnit: unit
+): location;
+
+export declare function Jass_Constant_Native_GetUnitRallyUnit(
+    whichUnit: unit
+): unit;
+
+export declare function Jass_Constant_Native_GetUnitRallyDestructable(
+    whichUnit: unit
+): destructable;
+
+export declare function Jass_Constant_Native_IsUnitInGroup(
+    whichUnit: unit,
+    whichGroup: group
+): boolean;
+
+export declare function Jass_Constant_Native_IsUNitInForce(
+    whichUnit: unit,
+    whichForce: force
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitOwnedByPlayer(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitAlly(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitEnemy(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitVisible(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitDetected(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitInvisible(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitFogged(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitMasked(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitSelected(
+    whichUnit: unit,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitRace(
+    whichUnit: unit,
+    whichRace: race
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitType(
+    whichUnit: unit,
+    whichUnitType: unittype
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnit(
+    whichUnit: unit,
+    whichSpecifiedUnit: unit
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitInRange(
+    whichUnit: unit,
+    otherUnit: unit,
+    distance: real
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitInRangeXY(
+    whichUnit: unit,
+    x: real,
+    y: real,
+    distance: real
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitInRangeLoc(
+    whichUnit: unit,
+    whichLocation: location,
+    distance: real
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitHidden(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitIllusion(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitInTransport(
+    whichUnit: unit,
+    whichTransport: unit
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitLoaded(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Constant_Native_IsHeroUniteId(
+    unitId: integer
+): boolean;
+
+export declare function Jass_Constant_Native_IsUnitIdType(
+    unitId: integer,
+    whichUnitType: unittype
+): boolean;
+
+export declare function Jass_Native_UnitShareVision(
+    whichUnit: unit,
+    whichPlayer: player,
+    share: boolean
+): nothing;
+
+export declare function Jass_Native_UnitSuspendDecay(
+    whichUnit: unit,
+    suspend: boolean
+): nothing;
+
+export declare function Jass_Native_UnitAddType(
+    whichUnit: unit,
+    whichUnitType: unittype
+): boolean;
+
+export declare function Jass_Native_UnitRemoveType(
+    whichUnit: unit,
+    whichUnitType: unittype
+): boolean;
+
+export declare function Jass_Native_UnitAddAbility(
+    whichUnit: unit,
+    abilityId: integer
+): boolean;
+
+export declare function Jass_Native_UnitRemoveAbility(
+    whichUnit: unit,
+    abilityId: integer
+): boolean;
+
+export declare function Jass_Native_UnitMakeAbilityPermanent(
+    whichUnit: unit,
+    permanent: boolean,
+    abilityId: integer
+): boolean;
+
+export declare function Jass_Native_UnitRemoveBuffs(
+    whichUnit: unit,
+    removePositive: boolean,
+    removeNegative: boolean
+): nothing;
+
+export declare function Jass_Native_UnitRemoveBuffsEx(
+    whichUnit: unit,
+    removePositive: boolean,
+    removeNegative: boolean,
+    magic: boolean,
+    physical: boolean,
+    timedLife: boolean,
+    aura: boolean,
+    autoDispel: boolean,
+): nothing;
+
+export declare function Jass_Native_UnitHasBuffsEx(
+    whichUnit: unit,
+    removePositive: boolean,
+    removeNegative: boolean,
+    magic: boolean,
+    physical: boolean,
+    timedLife: boolean,
+    aura: boolean,
+    autoDispel: boolean,
+): boolean;
+
+export declare function Jass_Native_UnitCountBuffsEx(
+    whichUnit: unit,
+    removePositive: boolean,
+    removeNegative: boolean,
+    magic: boolean,
+    physical: boolean,
+    timedLife: boolean,
+    aura: boolean,
+    autoDispel: boolean,
+): integer;
+
+export declare function Jass_Native_UnitAddSleep(
+    whichUnit: unit,
+    add: boolean
+): nothing;
+
+export declare function Jass_Native_UnitCanSleep(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Native_UnitAddSleepPerm(
+    whichUnit: unit,
+    add: boolean
+): nothing;
+
+
+export declare function Jass_Native_UnitCanSleepPerm(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Native_UnitIsSleeping(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Native_UnitWakeUp(
+    whichUnit: unit
+): nothing;
+
+export declare function Jass_Native_UnitApplyTimedLife(
+    whichUnit: unit,
+    buffId: integer,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_UnitIgnoreAlarm(
+    whichUnit: unit,
+    flag: boolean
+): boolean;
+
+export declare function Jass_Native_UnitIgnoreAlarmToggled(
+    whichUnit: unit
+): boolean;
+
+export declare function Jass_Native_UnitResetCooldown(
+    whichUnit: unit
+): nothing;
+
+export declare function Jass_Native_UnitSetConstructionProgress(
+    whichUnit: unit,
+    percentage: integer
+): nothing;
+
+export declare function Jass_Native_UnitSetUpgradeProgress(
+    whichUnit: unit,
+    percentage: integer
+): nothing;
+
+export declare function Jass_Native_UnitPauseTimedLife(
+    whichUnit: unit,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_UnitSetUsesAltIcon(
+    whichUnit: unit,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_UnitDamagePoint(
+    whichUnit: unit,
+    delay: real,
+    radius: real,
+    x: real,
+    y: real,
+    amount: real,
+    attack: boolean,
+    ranged: boolean,
+    attackType: attacktype,
+    damageType: damagetype,
+    weaponType: weapontype
+): boolean;
+
+export declare function Jass_Native_UnitDamageTarget(
+    whichUnit: unit,
+    target: widget,
+    amount: real,
+    attack: boolean,
+    ranged: boolean,
+    attackType: attacktype,
+    damageType: damagetype,
+    weaponType: weapontype
+): boolean;
+
+export declare function Jass_Native_IssueImmediateOrder(
+    whichUnit: unit,
+    order: string
+): boolean;
+
+export declare function Jass_Native_IssueImmediateOrderById(
+    whichUnit: unit,
+    order: integer
+): boolean;
+
+export declare function Jass_Native_IssuePointOrder(
+    whichUnit: unit,
+    order: string,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssuePointOrderLoc(
+    whichUnit: unit,
+    order: string,
+    whichLocation: location
+): boolean;
+
+export declare function Jass_Native_IssuePointOrderById(
+    whichUnit: unit,
+    order: integer,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssuePointOrderByIdLoc(
+    whichUnit: unit,
+    order: integer,
+    whichLocation: location
+): boolean;
+
+export declare function Jass_Native_IssueTargetOrder(
+    whichUnit: unit,
+    order: string,
+    target: widget
+): boolean;
+
+export declare function Jass_Native_IssueTargetOrderById(
+    whichUnit: unit,
+    order: integer,
+    target: widget
+): boolean;
+
+export declare function Jass_Native_IssueInstantPointOrder(
+    whichUnit: unit,
+    order: string,
+    x: real,
+    y: real,
+    target: widget
+): boolean;
+
+export declare function Jass_Native_IssueInstantPointOrderById(
+    whichUnit: unit,
+    order: integer,
+    x: real,
+    y: real,
+    target: widget
+): boolean;
+
+export declare function Jass_Native_IssueInstantTargetOrder(
+    whichUnit: unit,
+    order: string,
+    target: widget,
+    instantTarget: widget
+): boolean;
+
+export declare function Jass_Native_IssueInstantTargetOrderById(
+    whichUnit: unit,
+    order: integer,
+    target: widget,
+    instantTarget: widget
+): boolean;
+
+export declare function Jass_Native_IssueBuildOrder(
+    whichPeon: unit,
+    unitToBuild: string,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssueBuildOrderById(
+    whichPeon: unit,
+    unitId: integer,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssueNeutralImmediateOrder(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitToBuild: string
+): boolean;
+
+export declare function Jass_Native_IssueNeutralImmediateOrderById(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitId: integer
+): boolean;
+
+export declare function Jass_Native_IssueNeutralPointOrder(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitToBuild: string,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssueNeutralPointOrderById(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitId: integer,
+    x: real,
+    y: real
+): boolean;
+
+export declare function Jass_Native_IssueNeutralTargetOrder(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitToBuild: string,
+    target: widget,
+): boolean;
+
+export declare function Jass_Native_IssueNeutralTargetOrderById(
+    whichPlayer: player,
+    neutralStructure: unit,
+    unitId: integer,
+    target: widget,
+): boolean;
+
+export declare function Jass_Native_GetUnitCurrentOrder(
+    whichUnit: unit
+): integer;
+
+export declare function Jass_Native_SetResourceAmount(
+    whichUnit: unit,
+    amount: integer
+): nothing;
+
+export declare function Jass_Native_AddResourceAmount(
+    whichUnit: unit,
+    amount: integer
+): nothing;
+
+export declare function Jass_Native_GetResourceAmount(
+    whichUnit: unit,
+): integer;
+
+export declare function Jass_Native_WaygateGetDestinationX(
+    waygate: unit
+): real;
+
+export declare function Jass_Native_WaygateGetDestinationY(
+    waygate: unit
+): real;
+
+export declare function Jass_Native_WaygateSetDestionation(
+    waygate: unit,
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_WaygateActivate(
+    waygate: unit,
+    activate: boolean
+): nothing;
+
+export declare function Jass_Native_WaygateIsActive(
+    waygate: unit,
+): boolean;
+
+export declare function Jass_Native_AddItemToAllStock(
+    itemId: integer,
+    currentStock: integer,
+    stockMax: integer
+): nothing;
+
+export declare function Jass_Native_AddItemToStock(
+    whichUnit: unit,
+    itemId: integer,
+    currentStock: integer,
+    stockMax: integer
+): nothing;
+
+export declare function Jass_Native_AddUnitToAllStock(
+    unitId: integer,
+    currentStock: integer,
+    stockMax: integer
+): nothing;
+
+export declare function Jass_Native_AddUnitToStock(
+    whichUnit: unit,
+    unitId: integer,
+    currentStock: integer,
+    stockMax: integer
+): nothing;
+
+export declare function Jass_Native_RemoveItemFromAllStock(
+    itemId: integer
+): nothing;
+
+export declare function Jass_Native_RemoveItemFromStock(
+    whichUnit: unit,
+    itemId: integer
+): nothing;
+
+export declare function Jass_Native_RemoveUnitFromAllStock(
+    unitId: integer
+): nothing;
+
+export declare function Jass_Native_RemoveUnitFromStock(
+    whichUnit: unit,
+    unitId: integer
+): nothing;
+
+export declare function Jass_Native_SetAllItemTypeSlots(
+    solts: integer
+): nothing;
+
+export declare function Jass_Native_SetAllUnitTypeSlots(
+    solts: integer
+): nothing;
+
+export declare function Jass_Native_SetItemTypeSlots(
+    whichUnit: unit,
+    slots: integer
+): nothing;
+
+export declare function Jass_Native_SetUnitTypeSlots(
+    whichUnit: unit,
+    slots: integer
+): nothing;
+
+export declare function Jass_Native_GetUnitUserData(
+    whichUnit: unit,
+): integer;
+
+export declare function Jass_Native_SetUnitUserData(
+    whichUnit: unit,
+    data: integer
+): nothing;
+
+
+/*Player*/
+export declare function Jass_Native_();
 
 
 
