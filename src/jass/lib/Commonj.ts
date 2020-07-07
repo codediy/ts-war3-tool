@@ -3374,7 +3374,186 @@ export declare function Jass_Native_SetUnitUserData(
 
 
 /*Player*/
-export declare function Jass_Native_();
+export declare function Jass_Constant_Native_Player(
+    number: integer
+): player;
+
+export declare function Jass_Constant_Native_GetLocalPlayer(): player;
+
+export declare function Jass_Constant_Native_IsPlayerAlly(
+    whichPlayer: player,
+    otherPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsPlayerEnemy(
+    whichPlayer: player,
+    otherPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsPlayerInForce(
+    whichPlayer: player,
+    whichForce: force
+): boolean ;
+
+export declare function Jass_Constant_Native_IsVisibleToPlayer(
+    x: real,
+    y: real,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsLocationVisibleToPlayer(
+    whichLocation: location,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsFoggedToPlayer(
+    x: real,
+    y: real,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsLocationFoggedToPlayer(
+    whichLocation: location,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsMaskedToPlayer(
+    x: real,
+    y: real,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_IsLocationMaskedToPlayer(
+    whichLocation: location,
+    whichPlayer: player
+): boolean;
+
+export declare function Jass_Constant_Native_GetPlayerRace(
+    whichPlayer: player
+): race;
+
+export declare function Jass_Constant_Native_GetPlayerId(
+    whichPlayer: player
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerUnitCount(
+    whichPlayer: player,
+    includeIncomplete: boolean
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerTypedUnitCount(
+    whichPlayer: player,
+    unitName: string,
+    includeIncomplete: boolean,
+    includeUpgrade: boolean
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerStructureCount(
+    whichPlayer: player,
+    includeIncomplete: boolean
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerState(
+    whichPlayer: player,
+    whichPlayerState: playerstate
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerScore(
+    whichPlayer: player,
+    whichPlayerScore: playerscore
+): integer;
+
+export declare function Jass_Constant_Native_GetPlayerAlliance(
+    sourcePlayer: player,
+    otherPlayer: player,
+    whichAllianceSetting: alliancetype
+): boolean;
+
+export declare function Jass_Constant_Native_GetPlayerHandicap(
+    whichPlayer: player
+): real;
+
+export declare function Jass_Constant_Native_GetPlayerHandicapXp(
+    whichPlayer: player
+): real;
+
+export declare function Jass_Constant_Native_SetPlayerHandicap(
+    whichPlayer: player,
+    handicap: real
+): nothing;
+
+export declare function Jass_Constant_Native_SetPlayerHandicapXp(
+    whichPlayer: player,
+    handicap: real
+): nothing;
+
+
+export declare function Jass_Constant_Native_SetPlayerTechMaxAllowed(
+    whichPlayer: player,
+    techid: integer,
+    max: integer
+): nothing;
+
+export declare function Jass_Constant_Native_GetPlayerTechMaxAllowed(
+    whichPlayer: player,
+    techid: integer,
+): integer;
+
+export declare function Jass_Constant_Native_AddPlayerTechResearched(
+    whichPlayer: player,
+    techid: integer,
+    levels: integer
+): nothing;
+
+export declare function Jass_Constant_Native_SetPlayerTechResearched(
+    whichPlayer: player,
+    techid: integer,
+    setToLevel: integer
+): nothing;
+
+export declare function Jass_Constant_Native_GetPlayerTechResearched(
+    whichPlayer: player,
+    techid: integer,
+    specificonly: boolean
+): boolean;
+
+export declare function Jass_Constant_Native_GetPlayerTechCount(
+    whichPlayer: player,
+    techid: integer,
+    specificonly: boolean
+): integer;
+
+export declare function Jass_Native_SetPlayerUnitsOwner(
+    whichPlayer: player,
+    newOwner: integer
+): nothing;
+
+export declare function Jass_Native_CripplePlayer(
+    whichPlayer: player,
+    toWhichPlayer: force,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetPlayerAbilityAvailable(
+    whichPlayer: player,
+    abilid: integer,
+    avail: boolean
+): nothing;
+
+export declare function Jass_Native_SetPlayerState(
+    whichPlayer: player,
+    whichPlayerState: playerstate,
+    value: integer
+): nothing;
+
+export declare function Jass_Native_RemovePlayer(
+    whichPlayer: player,
+    gameResult: playergameresult
+): nothing;
+
+export declare function Jass_Native_CachePlayerHeroData(
+    whichPlayer: player
+): nothing;
 
 
 
