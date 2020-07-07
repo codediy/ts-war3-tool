@@ -3759,28 +3759,1128 @@ export declare function Jass_Native_GetCustomCampaignButtonVisible(
 export declare function Jass_Native_DoNotSaveReply(): nothing;
 
 /*Dialog*/
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
+export declare function Jass_Native_DialogCreate(): dialog;
+
+export declare function Jass_Native_DialogDestroy(
+    whichDialog: dialog
+): nothing;
+
+export declare function Jass_Native_DialogClear(
+    whichDialog: dialog
+): nothing;
+
+export declare function Jass_Native_DialogSetMessage(
+    whichDialog: dialog,
+    messageText: string
+): nothing;
+
+export declare function Jass_Native_DialogAddButton(
+    whichDialog: dialog,
+    buttonText: string,
+    hotKey: integer
+): button;
+
+export declare function Jass_Native_DialogAddQuitButton(
+    whichDialog: dialog,
+    doScoreScreen: boolean,
+    buttonText: string,
+    hotKey: integer
+): button;
+
+export declare function Jass_Native_DialogDisplay(
+    whichPlayer: player,
+    whichDialog: dialog,
+    flag: boolean
+): nothing;
+
+/*Cache*/
+export declare function Jass_Native_ReloadGameCachesFromDisk(): boolean;
+
+export declare function Jass_Native_InitGameCache(
+    campaignFile: string
+): gamecache;
+
+export declare function Jass_Native_SaveGameCache(
+    whichCache: gamecache
+): boolean;
+
+export declare function Jass_Native_StoreInteger(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    value: integer
+): nothing;
+
+export declare function Jass_Native_StoreReal(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    value: real
+): nothing;
+
+export declare function Jass_Native_StoreBoolean(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    value: boolean
+): nothing;
+
+export declare function Jass_Native_StoreUnit(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    value: unit
+): nothing;
+
+export declare function Jass_Native_StoreString(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    value: string
+): nothing;
+
+export declare function Jass_Native_SyncStoredInteger(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_SyncStoredReal(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_SyncStoreBoolean(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_SyncStoredUnit(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_SyncStoredString(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_HaveStoredInteger(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_HaveStoredReal(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_HaveStoreBoolean(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_HaveStoredUnit(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_HaveStoredString(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_FlushGameCache(
+    cache: gamecache
+): nothing;
+
+export declare function Jass_Native_FlushStoredMission(
+    cache: gamecache,
+    missionKey: string,
+): nothing;
+
+export declare function Jass_Native_FlushStoredInteger(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_FlushStoredReal(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_FlushStoredBoolean(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_FlushStoredUnit(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+export declare function Jass_Native_FlushStoredString(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): nothing;
+
+
+export declare function Jass_Native_GetStoredInteger(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): integer;
+
+export declare function Jass_Native_GetStoredReal(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): real;
+
+export declare function Jass_Native_GetStoredBoolean(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): boolean;
+
+export declare function Jass_Native_GetStoredString(
+    cache: gamecache,
+    missionKey: string,
+    key: string
+): string;
+
+export declare function Jass_Native_RestoreUnit(
+    cache: gamecache,
+    missionKey: string,
+    key: string,
+    whichPlayer: player,
+    x: real,
+    y: real,
+    facing: real
+): unit;
+
+/*HashTable*/
+export declare function Jass_Native_initHshTable(): hashtable;
+
+export declare function Jass_Native_SaveInteger(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: integer
+): nothing;
+
+export declare function Jass_Native_SaveReal(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: real
+): nothing;
+
+export declare function Jass_Native_SaveBoolean(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: boolean
+): nothing;
+
+export declare function Jass_Native_SaveStr(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: string
+): nothing;
+
+export declare function Jass_Native_SavePlayerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: player
+): nothing;
+
+export declare function Jass_Native_SaveWidgetHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: widget
+): nothing;
+
+export declare function Jass_Native_SaveDestructableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: destructable
+): nothing;
+
+export declare function Jass_Native_SaveItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: item
+): nothing;
+
+export declare function Jass_Native_SaveUnitHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: unit
+): nothing;
+
+export declare function Jass_Native_SaveAbilityHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: ability
+): nothing;
+
+export declare function Jass_Native_SaveTimerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: timer
+): nothing;
+
+export declare function Jass_Native_SaveTriggerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: trigger
+): nothing;
+
+export declare function Jass_Native_SaveTriggerConditionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: triggercondition
+): nothing;
+
+export declare function Jass_Native_SaveTriggerActionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: triggeraction
+): nothing;
+
+export declare function Jass_Native_SaveTriggerEventHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: event
+): nothing;
+
+export declare function Jass_Native_SaveForceHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: force
+): nothing;
+
+export declare function Jass_Native_SaveGroupHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: group
+): nothing;
+
+export declare function Jass_Native_SaveLocationHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: location
+): nothing;
+
+export declare function Jass_Native_SaveRectHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: rect
+): nothing;
+
+export declare function Jass_Native_SaveBooleanExprHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: boolexpr
+): nothing;
+
+export declare function Jass_Native_SaveSoundHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: sound
+): nothing;
+
+export declare function Jass_Native_SaveEffectHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: effect
+): nothing;
+
+export declare function Jass_Native_SaveUnitPoolHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: unitpool
+): nothing;
+
+export declare function Jass_Native_SaveItemPoolHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: itempool
+): nothing;
+
+export declare function Jass_Native_SaveQuestHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: quest
+): nothing;
+
+export declare function Jass_Native_SaveQuestItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: questitem
+): nothing;
+
+export declare function Jass_Native_SaveDefeatConditionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: defeatcondition
+): nothing;
+
+export declare function Jass_Native_SaveTimerDialogHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: timerdialog
+): nothing;
+
+export declare function Jass_Native_SaveLeaderBoardHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: leaderboard
+): nothing;
+
+export declare function Jass_Native_SaveMultiboardHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: multiboard
+): nothing;
+
+export declare function Jass_Native_SaveMultiboardItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: multiboarditem
+): nothing;
+
+export declare function Jass_Native_SaveTrackableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: trackable
+): nothing;
+
+export declare function Jass_Native_SaveDialogHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: dialog
+): nothing;
+
+export declare function Jass_Native_SaveButtonHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: button
+): nothing;
+
+export declare function Jass_Native_SaveTextTagHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: texttag
+): nothing;
+
+export declare function Jass_Native_SaveLightningHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: lightning
+): nothing;
+
+export declare function Jass_Native_SaveImageHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: image
+): nothing;
+
+export declare function Jass_Native_SaveRegionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: region
+): nothing;
+
+export declare function Jass_Native_SaveFogStateHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: fogstate
+): nothing;
+
+export declare function Jass_Native_SaveFogModifierHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: fogmodifier
+): nothing;
+
+export declare function Jass_Native_SaveAgentHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: agent
+): nothing;
+
+export declare function Jass_Native_SaveHashtableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer,
+    value: hashtable
+): nothing;
+
+
+export declare function Jass_Native_LoadInteger(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): integer;
+
+export declare function Jass_Native_LoadReal(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): real;
+
+export declare function Jass_Native_LoadBoolean(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_LoadStr(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): string;
+
+export declare function Jass_Native_LoadPlayerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): player;
+
+export declare function Jass_Native_LoadWidgetHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): widget;
+
+export declare function Jass_Native_LoadDestructableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): destructable;
+
+export declare function Jass_Native_LoadItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): item;
+
+export declare function Jass_Native_LoadUnitHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): unit;
+
+export declare function Jass_Native_LoadAbilityHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): ability;
+
+export declare function Jass_Native_LoadTimerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): timer;
+
+export declare function Jass_Native_LoadTriggerHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): trigger;
+
+export declare function Jass_Native_LoadTriggerConditionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): triggercondition;
+
+export declare function Jass_Native_LoadTriggerActionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): triggeraction;
+
+export declare function Jass_Native_LoadTriggerEventHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): event;
+
+export declare function Jass_Native_LoadForceHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): force;
+
+export declare function Jass_Native_LoadGroupHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): group;
+
+export declare function Jass_Native_LoadLocationHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): location;
+
+export declare function Jass_Native_LoadIRectHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): rect;
+
+export declare function Jass_Native_LoadBooleanExprHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolexpr;
+
+export declare function Jass_Native_LoadSoundHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): sound;
+
+export declare function Jass_Native_LoadEffectHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): effect;
+
+export declare function Jass_Native_LoadUnitPoolHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): unitpool;
+
+export declare function Jass_Native_LoadItemPoolHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): itempool;
+
+export declare function Jass_Native_LoadQuestHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): quest;
+
+export declare function Jass_Native_LoadQuestItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): questitem;
+
+export declare function Jass_Native_LoadDefaultConditionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): defeatcondition;
+
+export declare function Jass_Native_LoadTimerDialogHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): timerdialog;
+
+export declare function Jass_Native_LoadLeaderBoardHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): leaderboard;
+
+export declare function Jass_Native_LoadMultiboardHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): multiboard;
+
+export declare function Jass_Native_LoadMultiboardItemHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): multiboarditem;
+
+export declare function Jass_Native_LoadTrackableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): trackable;
+
+export declare function Jass_Native_LoadDialogHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): dialog;
+
+export declare function Jass_Native_LoadButtonHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): button;
+
+export declare function Jass_Native_LoadTextTagHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): texttag;
+
+export declare function Jass_Native_LoadLightningHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): lightning;
+
+export declare function Jass_Native_LoadImageHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): image;
+
+export declare function Jass_Native_LoadUbersplatHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): ubersplat;
+
+export declare function Jass_Native_LoadRegionHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): region;
+
+export declare function Jass_Native_LoadFogStateHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): fogstate;
+
+export declare function Jass_Native_LoadFogModifierHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): fogmodifier;
+
+export declare function Jass_Native_LoadHashtableHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): hashtable;
+
+export declare function Jass_Native_HaveSavedInteger(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_HaveSavedReal(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_HaveSavedBoolean(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_HaveSavedString(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_HaveSavedHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): boolean;
+
+export declare function Jass_Native_RemoveSavedInteger(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): nothing;
+
+export declare function Jass_Native_RemoveSavedReal(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): nothing;
+
+export declare function Jass_Native_RemoveSavedBoolean(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): nothing;
+
+export declare function Jass_Native_RemoveSavedString(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): nothing;
+
+export declare function Jass_Native_RemoveSavedHandle(
+    table: hashtable,
+    parentKey: integer,
+    childKey: integer
+): nothing;
+
+export declare function Jass_Native_FlushParentHashTable(
+    table: hashtable
+): nothing;
+
+export declare function Jass_Native_FlushChildHashTable(
+    table: hashtable,
+    parentKey: integer
+): nothing;
+
+/*Random*/
+export declare function Jass_Native_GetRandomInt(
+    low: integer,
+    high: integer
+): integer;
+
+export declare function Jass_Native_GetRandomReal(
+    low: real,
+    high: real
+): real;
+
+/*Pool*/
+export declare function Jass_Native_CreateUnitPool(): unitpool;
+
+export declare function Jass_Native_DestroyUnitPool(
+    whichPool: unitpool
+): nothing;
+
+export declare function Jass_Native_UnitPoolAddUnitType(
+    whichPool: unitpool,
+    unitId: integer,
+    weight: real
+): nothing;
+
+export declare function Jass_Native_UnitPoolRemoveUnitType(
+    whichPool: unitpool,
+    unitId: integer,
+): nothing;
+
+export declare function Jass_Native_PlaceRandomUnit(
+    whichPool: unitpool,
+    whichPlayer: player,
+    x: real,
+    y: real,
+    facing: real
+): unit;
+
+export declare function Jass_Native_CreateItemPool(): itempool;
+
+export declare function Jass_Native_DestroyItemPool(
+    whichItemPool: itempool
+): nothing;
+
+export declare function Jass_Native_ItemPoolAddItemType(
+    whichPool: itempool,
+    itemid: integer,
+    weight: real
+): nothing;
+
+export declare function Jass_Native_ItemPoolRemoveItemType(
+    whichPool: itempool,
+    itemid: integer,
+): nothing;
+
+export declare function Jass_Native_PlaceRandomItem(
+    whichPool: itempool,
+    x: real,
+    y: real,
+): itempool;
+
+export declare function Jass_Native_ChooseRandomCreep(
+    level: integer
+): integer;
+
+export declare function Jass_Native_ChooseRandomNPBuilding(): integer;
+
+export declare function Jass_Native_ChooseRandomItem(
+    level: integer
+): integer;
+
+export declare function Jass_Native_ChooseRandomItemEx(
+    whichType: itemtype,
+    level: integer
+): integer;
+
+export declare function Jass_Native_SetRandomSeed(
+    seed: integer
+): nothing;
+
+/*Visual*/
+export declare function Jass_Native_SetTerrainFog(
+    a: real,
+    b: real,
+    c: real,
+    d: real,
+    e: real
+): nothing;
+
+export declare function Jass_Native_ResetTerrainFog(): nothing;
+
+export declare function Jass_Native_SetUnitFog(
+    a: real,
+    b: real,
+    c: real,
+    d: real,
+    e: real
+): nothing;
+
+export declare function Jass_Native_SetTerrainFogEx(
+    style: integer,
+    zstart: real,
+    zend: real,
+    density: real,
+    red: real,
+    green: real,
+    blue: real
+): nothing;
+
+export declare function Jass_Native_DisplayTextToPlayer(
+    toPlayer: player,
+    x: real,
+    y: real,
+    message: string
+): nothing;
+
+export declare function Jass_Native_DisplayTimedTextToPlayer(
+    toPlayer: player,
+    x: real,
+    y: real,
+    duration: real,
+    message: string
+): nothing;
+
+export declare function Jass_Native_DisplayTimedTextFromPlayer(
+    toPlayer: player,
+    x: real,
+    y: real,
+    duration: real,
+    message: string
+): nothing;
+
+export declare function Jass_Native_ClearTextMessages(): nothing;
+
+export declare function Jass_Native_SetDayNightModels(
+    terrainDNCFile: string,
+    unitDNCFile: string,
+): nothing;
+
+export declare function Jass_Native_SetSkyModel(
+    skyModelFile: string
+): nothing;
+
+export declare function Jass_Native_EnableUserControl(
+    b: boolean
+): nothing;
+
+export declare function Jass_Native_EnableUserUI(
+    b: boolean
+): nothing;
+
+export declare function Jass_Native_SuspendTimeOfDay(
+    b: boolean
+): nothing;
+
+export declare function Jass_Native_SetTimeOfDayScale(
+    r: real
+): nothing;
+
+export declare function Jass_Native_GetTimeOfDayScale(): real;
+
+export declare function Jass_Native_ShowInterface(
+    flag: boolean,
+    fadeDuration: real
+): nothing;
+
+export declare function Jass_Native_PauseGame(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_UnitAddIndicator(
+    whichUnit: unit,
+    read: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_AddIndicator(
+    whichWidget: widget,
+    read: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_PingMinimap(
+    x: real,
+    y: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_PingMinimapEx(
+    x: real,
+    y: real,
+    duration: real,
+    read: integer,
+    green: integer,
+    blue: integer,
+    extraEffects: boolean
+): nothing;
+
+export declare function Jass_Native_EnableOcclusion(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetIntroShotText(
+    introText: string
+): nothing;
+
+export declare function Jass_Native_SetIntroShotModel(
+    introModelPath: string
+): nothing;
+
+export declare function Jass_Native_EnableWorldFogBoundary(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_PlayModelCinematic(
+    modelName: string
+): nothing;
+
+export declare function Jass_Native_PlayCinematic(
+    movieName: string
+): nothing;
+
+export declare function Jass_Native_ForceUIKey(
+    key: string
+): nothing;
+
+export declare function Jass_Native_ForceUICancel(): nothing;
+
+export declare function Jass_Native_DisplayLoadDialog(): nothing;
+
+export declare function Jass_Native_SetAltMinimapIcon(
+    iconPath: string
+): nothing;
+
+export declare function Jass_Native_DisableRestartMission(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_CreateTextTag(): texttag;
+
+export declare function Jass_Native_DestroyTextTag(
+    t: texttag
+): nothing;
+
+export declare function Jass_Native_SetTextTagText(
+    t: texttag,
+    s: string,
+    height: real
+): nothing;
+
+export declare function Jass_Native_SetTextTagPos();
+
+export declare function Jass_Native_SetTextTagPosUnit();
+
+export declare function Jass_Native_SetTextTagColor();
+
+export declare function Jass_Native_SetTextTagVelocity();
+
+export declare function Jass_Native_SetTextTagSuspended();
+
+export declare function Jass_Native_SetTextTagPermanent();
+
+export declare function Jass_Native_SetTextTagAge();
+
+export declare function Jass_Native_SetTextTagLifeSpan();
+
+export declare function Jass_Native_SetTextTagFadepoint();
+
+export declare function Jass_Native_SetReservedLocalHeroButtons();
+
+export declare function Jass_Native_GetAllyColorFilterState();
+
+export declare function Jass_Native_SetAllyColorFilterState();
+
+export declare function Jass_Native_GetCreepCampFilterState();
+
+export declare function Jass_Native_SetCreepCampFilterState();
+
+export declare function Jass_Native_EnableMinimapFilterButtons();
+
+export declare function Jass_Native_EnableDragSelect();
+
+export declare function Jass_Native_EnablePreSelect();
+
+export declare function Jass_Native_EnableSelect();
+
 export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
