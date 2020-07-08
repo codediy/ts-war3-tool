@@ -5825,28 +5825,507 @@ export declare function Jass_Native_UnregisterStackedSound(
     rectHeight: real
 ): nothing;
 
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
-export declare function Jass_Native_();
+export declare function Jass_Native_AddWeatherEffect(
+    where: rect,
+    effectId: integer
+): weathereffect;
+
+export declare function Jass_Native_RemoveWeatherEffect(
+    whichEffect: weathereffect
+): nothing;
+
+export declare function Jass_Native_EnableWeatherEffect(
+    whichEffect: weathereffect,
+    enable: boolean
+): nothing;
+
+export declare function Jass_Native_TerrainDeformCrater(
+    x: real,
+    y: real,
+    radius: real,
+    depth: real,
+    duration: integer,
+    permanent: boolean
+): terraindeformation;
+
+export declare function Jass_Native_TerrainDeformRipple(
+    x: real,
+    y: real,
+    radius: real,
+    depth: real,
+    duration: integer,
+    count: integer,
+    spaceWaves: real,
+    timeWaves: real,
+    radiusStartPct: real,
+    limitNeg: boolean
+): terraindeformation;
+
+export declare function Jass_Native_TerrainDeformWave(
+    x: real,
+    y: real,
+    dirX: real,
+    dirY: real,
+    distance: real,
+    speed: real,
+    radius: real,
+    depth: real,
+    trailTime: integer,
+    count: integer
+): terraindeformation;
+
+export declare function Jass_Native_TerrainDeformRandom(
+    x: real,
+    y: real,
+    radius: real,
+    minDelta: real,
+);
+
+export declare function Jass_Native_TerrainDeformStop(
+    deformation: terraindeformation,
+    duration: integer
+): nothing;
+
+export declare function Jass_Native_TerrainDeformStopAll(): nothing;
+
+export declare function Jass_Native_AddSpecialEffect(
+    modelName: string,
+    x: real,
+    y: real
+): effect;
+
+export declare function Jass_Native_AddSpecialEffectLoc(
+    modelName: string,
+    where: locaiton
+): effect;
+
+export declare function Jass_Native_AddSpecialEffectTarget(
+    modelName: string,
+    target: widget,
+    attchPointName: string
+): effect;
+
+export declare function Jass_Native_DestroyEffect(
+    whichEffect: effect
+): nothing;
+
+export declare function Jass_Native_AddSpellEffect(
+    abilityString: string,
+    t: effectype,
+    x: real,
+    y: real
+): effect;
+
+export declare function Jass_Native_AddSpellEffectLoc(
+    abilityString: string,
+    t: effectype,
+    where: location
+): effect;
+
+export declare function Jass_Native_AddSpellEffectById(
+    abilityId: integer,
+    t: effectype,
+    x: real,
+    y: real
+): effect;
+
+export declare function Jass_Native_AddSpellEffectByIdLoc(
+    abilityId: integer,
+    t: effectype,
+    where: location
+): effect;
+
+export declare function Jass_Native_AddSpellEffectTarget(
+    modleName: string,
+    t: effectype,
+    target: widget,
+    attachPoint: string
+): effect;
+
+export declare function Jass_Native_AddSpellEffectTargetById(
+    abilityId: integer,
+    t: effectype,
+    target: widget,
+    attachPoint: string
+): effect;
+
+export declare function Jass_Native_AddLightning(
+    codeName: string,
+    checkVisibility: boolean,
+    x1: real,
+    y1: real,
+    x2: real,
+    y2: real,
+): lightning;
+
+export declare function Jass_Native_AddLightningEx(
+    codeName: string,
+    checkVisibility: boolean,
+    x1: real,
+    y1: real,
+    z1: real,
+    x2: real,
+    y2: real,
+    z2: real,
+): lightning;
+
+export declare function Jass_Native_DestroyLightning(
+    whichBolt: lightning
+): boolean;
+
+export declare function Jass_Native_MoveLightning(
+    whichBolt: lightning,
+    checkVisibility: boolean,
+    x1: real,
+    y1: real,
+    x2: real,
+    y2: real,
+): boolean;
+
+export declare function Jass_Native_MoveLightningEx(
+    whichBolt: lightning,
+    checkVisibility: boolean,
+    x1: real,
+    y1: real,
+    z1: real,
+    x2: real,
+    y2: real,
+    z2: real,
+): boolean;
+
+export declare function Jass_Native_GetLightningColorA(
+    whichBolt: lightning,
+): real;
+
+export declare function Jass_Native_GetLightningColorR(
+    whichBolt: lightning,
+): real;
+
+export declare function Jass_Native_GetLightningColorG(
+    whichBolt: lightning,
+): real;
+
+export declare function Jass_Native_GetLightningColorB(
+    whichBolt: lightning,
+): real;
+
+export declare function Jass_Native_SetLightningColor(
+    whichBolt: lightning,
+    r: real,
+    g: real,
+    b: real,
+    a: real,
+): boolean;
+
+export declare function Jass_Native_GetAbilityEffect(
+    abilityString: string,
+    t: effectype,
+    index: integer
+): string;
+
+export declare function Jass_Native_GetAbilityEffectById(
+    abilityId: integer,
+    t: effectype,
+    index: integer
+): string;
+
+export declare function Jass_Native_GetAbilitySound(
+    abilityString: string,
+    t: soundtype
+): string;
+
+export declare function Jass_Native_GetAbilitySoundById(
+    abilityId: integer,
+    t: soundtype
+): string;
+
+/*Terrain*/
+export declare function Jass_Native_GetTerrainCliffLevel(
+    x: real,
+    y: real
+): integer;
+
+export declare function Jass_Native_SetWaterBaseColor(
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_SetWaterDeforms(
+    val: boolean
+): nothing;
+
+export declare function Jass_Native_GetTerrainType(
+    x: real,
+    y: real
+): integer;
+
+export declare function Jass_Native_GetTerrainVariance(
+    x: real,
+    y: real
+): integer;
+
+export declare function Jass_Native_SetTerrainType(
+    x: real,
+    y: real,
+    terrainType: integer,
+    variation: integer,
+    area: integer,
+    shape: integer
+): nothing;
+
+
+export declare function Jass_Native_IsTerrainPathable(
+    x: real,
+    y: real,
+    t: pathingtype
+): boolean;
+
+export declare function Jass_Native_SetTerrainPathable(
+    x: real,
+    y: real,
+    t: pathingtype,
+    flag: boolean
+): nothing;
+
+/*Image*/
+export declare function Jass_Native_CreateImage(
+    file: string,
+    sizeX: real,
+    sizeY: real,
+    sizeZ: real,
+    posX: real,
+    posY: real,
+    posZ: real,
+    originX: real,
+    originY: real,
+    originZ: real,
+    imageType: integer
+): image;
+
+export declare function Jass_Native_DestroyImage(
+    whichImage: image
+): nothing;
+
+export declare function Jass_Native_ShowImage(
+    whichImage: image,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetImageConstantHeight(
+    whichImage: image,
+    flag: boolean,
+    height: real
+): nothing;
+
+export declare function Jass_Native_SetImagePosition(
+    whichImage: image,
+    x: real,
+    y: real,
+    z: real
+): nothing;
+
+export declare function Jass_Native_SetImageColor(
+    whichImage: image,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer,
+): nothing;
+
+export declare function Jass_Native_SetImageRender(
+    whichImage: image,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetImageRenderAlways(
+    whichImage: image,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetImageAboveWater(
+    whichImage: image,
+    flag: boolean,
+    userWaterAlpha: boolean
+): nothing;
+
+export declare function Jass_Native_SetImageType(
+    whichImage: image,
+    imageType: integer
+): nothing;
+
+/*Ubersplat*/
+export declare function Jass_Native_CreateUbersplat(
+    x: real,
+    y: real,
+    name: string,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer,
+    forcePaused: boolean,
+    onBirthTime: boolean
+): ubersplat;
+
+export declare function Jass_Native_DestroyUbersplat(
+    whichSplat: ubersplat
+): nothing;
+
+export declare function Jass_Native_ResetUbersplat(
+    whichSplat: ubersplat
+): nothing;
+
+export declare function Jass_Native_FinishUbersplat(
+    whichSplat: ubersplat
+): nothing;
+
+export declare function Jass_Native_ShowUbersplat(
+    whichSplat: ubersplat,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetUbersplatRender(
+    whichSplat: ubersplat,
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_SetUbersplatRenderAlways(
+    whichSplat: ubersplat,
+    flag: boolean
+): nothing;
+
+/*Blight*/
+export declare function Jass_Native_SetBlight(
+    whichPlayer: player,
+    x: real,
+    y: real,
+    radius: real,
+    addBlight: boolean
+): nothing;
+
+export declare function Jass_Native_SetBlightRect(
+    whichPlayer: player,
+    r: rect,
+    radius: real,
+    addBlight: boolean
+): nothing;
+
+export declare function Jass_Native_SetBlightPoint(
+    whichPlayer: player,
+    x: real,
+    y: real,
+    addBlight: boolean
+): nothing;
+
+export declare function Jass_Native_SetBlightLoc(
+    whichPlayer: player,
+    whichLocation: location,
+    radius: real,
+    addBlight: boolean
+): unit;
+
+export declare function Jass_Native_CreateBlightedGoldmine(
+    id: player,
+    x: real,
+    y: real,
+    face: real
+): unit;
+
+export declare function Jass_Native_IsPointBlighted(
+    x: real,
+    y: real
+): boolean;
+
+/*Doodad*/
+export declare function Jass_Native_SetDoodadAnimation(
+    x: real,
+    y: real,
+    radius: real,
+    doodadID: integer,
+    nearestOnly: boolean,
+    animName: string,
+    animRandom: boolean
+): nothing;
+
+export declare function Jass_Native_SetDoodadAnimationRect(
+    r: rect,
+    doodadID: integer,
+    animName: string,
+    animRandom: boolean
+): nothing;
+
+/*Computer*/
+export declare function Jass_Native_StartMelleAI(
+    num: player,
+    script: string
+): nothing;
+
+export declare function Jass_Native_StartCampaignAI(
+    num: player,
+    script: string
+): nothing;
+
+export declare function Jass_Native_CommandAI(
+    num: player,
+    command: integer,
+    data: integer
+): nothing;
+
+export declare function Jass_Native_PauseCompAI(
+    p: player,
+    pause: boolean
+): nothing;
+
+export declare function Jass_Native_GetAIDifficulty(
+    num: player
+): aidifficulty;
+
+export declare function Jass_Native_RemoveGuardPosition(
+    hUnit: unit
+): nothing;
+
+export declare function Jass_Native_RecycleGuardPosition(
+    hUnit: unit
+): nothing;
+
+export declare function Jass_Native_RemoveAllGuardPositions(
+    num: player
+): nothing;
+
+export declare function Jass_Native_Cheat(
+    cheatStr: string
+): nothing;
+
+export declare function Jass_Native_IsNoVictoryCheat(): boolean;
+
+export declare function Jass_Native_IsNoDefeatCheat(): boolean;
+
+export declare function Jass_Native_Preload(
+    filename: string
+): nothing;
+
+export declare function Jass_Native_PreloadEnd(
+    timeout: real
+): nothing;
+
+export declare function Jass_Native_PreloadStart(): nothing;
+
+export declare function Jass_Native_PreloadRefresh(): nothing;
+
+export declare function Jass_Native_PreloadEndEx(): nothing;
+
+export declare function Jass_Native_PreloadGenClear(): nothing;
+
+export declare function Jass_Native_PreloadGenStart(): nothing;
+
+export declare function Jass_Native_PreloadGenEnd(
+    filename: string
+): nothing;
+
+export declare function Jass_Native_Preloader(
+    filename: string
+): nothing;
 
 
 
