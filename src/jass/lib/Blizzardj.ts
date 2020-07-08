@@ -2,13 +2,13 @@ import {handle, integer, nothing, real} from "./types";
 import {
     boolexpr,
     camerafield,
-    camerasetup, dialog, event, force,
+    camerasetup, dialog, effectype, event, force,
     gamespeed,
     item, lightning, limitop,
     location,
-    MAP_SPEED_NORMAL,
+    MAP_SPEED_NORMAL, pathingtype,
     player, playerunitevent,
-    rect, region, terraindeformation, timer,
+    rect, region, soundtype, terraindeformation, timer,
     trigger,
     unit, weathereffect
 } from "./Commonj";
@@ -858,6 +858,96 @@ export declare function Jass___DestroyLightningBJ(
     whichBolt: lightning
 ): boolean;
 
+export declare function Jass___MovelightningLoc(
+    whichBolt: lightning,
+    where1: location,
+    where2: location
+): boolean;
+
+export declare function Jass___GetLightningColorABJ(
+    whichBolt: lightning
+): real;
+
+export declare function Jass___GetLightningColorRBJ(
+    whichBolt: lightning
+): real;
+
+export declare function Jass___GetLightningColorGBJ(
+    whichBolt: lightning
+): real;
+
+export declare function Jass___GetLightningColorBBJ(
+    whichBolt: lightning
+): real;
+
+export declare function Jass___SetLightningColorBJ(
+    whichBolt: lightning,
+    r: real,
+    g: real,
+    b: real,
+    a: real
+): boolean;
+
+export declare function Jass___GetLastCreatedLightningBJ(): lightning;
+
+export declare function Jass___GetAbilityEffectBJ(
+    abilcode: integer,
+    t: effectype,
+    index: integer
+): string;
+
+export declare function Jass___GetAbilitySoundBJ(
+    abilcode: integer,
+    t: soundtype
+): string;
+
+export declare function Jass___GetTerrainCliffLevelBJ(
+    where: location
+): integer;
+
+export declare function Jass___GetTerrainTypeBJ(
+    where: location
+): integer;
+
+export declare function Jass___GetTerrainVarianceBJ(
+    where: location
+): integer;
+
+export declare function Jass___SetTerrainTypeBJ(
+    where: location,
+    terrainType: integer,
+    variation: integer,
+    area: integer,
+    shape: integer
+): nothing;
+
+export declare function Jass___IsTerrainPathableBJ(
+    where: location,
+    t: pathingtype
+): boolean;
+
+export declare function Jass___SetTerrainPathableBJ(
+    where: location,
+    t: pathingtype,
+    flag: boolean
+): nothing;
+
+export declare function Jass___SetWaterBaseColorBJ(
+    red: real,
+    green: real,
+    blue: real,
+    transparency: real
+): nothing;
+
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
+export declare function Jass___();
 export declare function Jass___();
 export declare function Jass___();
 export declare function Jass___();
