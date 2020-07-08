@@ -5231,6 +5231,601 @@ export declare function Jass_Native_LeaderboardSetItemValueColor(
 
 export declare function Jass_Native_CreateMultiboard(): multiboard;
 
+export declare function Jass_Native_DestroyMultiboard(
+    lb: multiboard
+): nothing;
+
+export declare function Jass_Native_MultiboardDisplay(
+    lb: multiboard,
+    show: boolean
+): nothing;
+
+export declare function Jass_Native_IsMultiboardDisplayed(
+    lb: multiboard
+): boolean;
+
+export declare function Jass_Native_MultiboardMinimize(
+    lb: multiboard,
+    minisize: boolean
+): nothing;
+
+export declare function Jass_Native_IsMultiboardDisplayed(
+    lb: multiboard
+): boolean;
+
+export declare function Jass_Native_MultiboardClear(
+    lb: multiboard
+): nothing;
+
+export declare function Jass_Native_MultiboardSetTitleText(
+    lb: multiboard,
+    label: string
+): nothing;
+
+export declare function Jass_Native_MultiboardGetTitleText(
+    lb: multiboard
+): string;
+
+export declare function Jass_Native_MultiboardSetTitleTextColor(
+    lb: multiboard,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_MultiboardGetRowCount(
+    lb: multiboard
+): integer;
+
+export declare function Jass_Native_MultiboardGetColumnCount(
+    lb: multiboard
+): integer;
+
+export declare function Jass_Native_MultiboardSetItemStyle(
+    lb: multiboard,
+    showValues: boolean,
+    showIcons: boolean
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemValue(
+    lb: multiboard,
+    value: string
+): nothing;
+
+export declare function Jass_Native_MultiboardSetValueColor(
+    lb: multiboard,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemsWidth(
+    lb: multiboard,
+    width: real
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemIcon(
+    lb: multiboard,
+    iconPath: string
+): nothing;
+
+export declare function Jass_Native_MultiboardGetItem(
+    lb: multiboard,
+    row: integer,
+    column: integer
+): multiboarditem;
+
+export declare function Jass_Native_MultiboardReleaseItem(
+    mbi: multiboarditem
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemStyle(
+    mbi: multiboarditem,
+    showValue: boolean,
+    showIcon: boolean
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemValue(
+    mbi: multiboarditem,
+    val: string
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemValueColor(
+    mbi: multiboarditem,
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemWidth(
+    mbi: multiboarditem,
+    width: real
+): nothing;
+
+export declare function Jass_Native_MultiboardSetItemIcon(
+    mbi: multiboarditem,
+    iconFileName: string
+): nothing;
+
+export declare function Jass_Native_MultiboardSuppressDisplay(
+    flag: boolean
+): nothing;
+
+/*Camera*/
+export declare function Jass_Native_SetCameraPosition(
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_SetCameraQuickPosition(
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_SetCameraBounds(
+    x1: real,
+    y1: real,
+    x2: real,
+    y2: real,
+    x3: real,
+    y3: real,
+    x4: real,
+    y5: real
+): nothing;
+
+export declare function Jass_Native_StopCamera(): nothing;
+
+export declare function Jass_Native_ResetToGameCamera(
+    duration: real
+): nothing;
+
+export declare function Jass_Native_PanCameraTo(
+    x: real,
+    y: real
+): nothing;
+
+export declare function Jass_Native_PanCameraToTimed(
+    x: real,
+    y: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_PanCameraToTimedWithZ(
+    x: real,
+    y: real,
+    zOffsetDest: real
+): nothing;
+
+export declare function Jass_Native_SetCinematicCamera(
+    cameraModelFile: string
+): nothing;
+
+export declare function Jass_Native_SetCameraRotateMode(
+    x: real,
+    y: real,
+    radiansToSweep: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_SetCameraField(
+    whichField: camerafield,
+    value: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_AdjustCameraField(
+    whichField: camerafield,
+    offset: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_SetCameraTargetController(
+    whichUnit: unit,
+    xoffset: real,
+    yoffset: real,
+    orientation: boolean
+): nothing;
+
+export declare function Jass_Native_SetCameraOrientController(
+    whichUnit: unit,
+    xoffset: real,
+    yoffset: real,
+): nothing;
+
+export declare function Jass_Native_CreateCameraSetup(): camerasetup;
+
+export declare function Jass_Native_CameraSetupSetField(
+    whichSetup: camerasetup,
+    whichField: camerafield,
+    value: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_CameraSetupGetField(
+    whichSetup: camerasetup,
+    whichField: camerafield
+): real;
+
+export declare function Jass_Native_CameraSetupSetDestPosition(
+    whichSetup: camerasetup,
+    x: real,
+    y: real,
+    duration: real
+): nothing;
+
+export declare function Jass_Native_CameraGetupGetDestPositionLoc(
+    whichSetup: camerasetup,
+): location;
+
+export declare function Jass_Native_CameraGetDestPositionX(
+    whichSetup: camerasetup,
+): real;
+
+export declare function Jass_Native_CameraSetupGetDestPositionY(
+    whichSetup: camerasetup,
+): real;
+
+export declare function Jass_Native_CameraSetupApply(
+    whichSetup: camerasetup,
+    doPan: boolean,
+    panTimed: boolean
+): nothing;
+
+export declare function Jass_Native_CameraSetupApplyWithZ(
+    whichSetup: camerasetup,
+    zDestOffset: real
+): nothing;
+
+export declare function Jass_Native_CameraSetupApplyForceDuration(
+    whichSetup: camerasetup,
+    doPan: boolean,
+    forceDuration: real
+): nothing;
+
+export declare function Jass_Native_CameraSetupApplyForceDurationWithZ(
+    whichSetup: camerasetup,
+    zDestOffset: real,
+    forceDuration: real
+): nothing;
+
+export declare function Jass_Native_CameraSetTargetNoise(
+    mag: real,
+    velocity: real
+): nothing;
+
+export declare function Jass_Native_CameraSetSourceNoise(
+    mag: real,
+    velocity: real
+): nothing;
+
+export declare function Jass_Native_CameraSetTargetNoiseEx(
+    mag: real,
+    velocity: real,
+    vertOnly: boolean
+): nothing;
+
+export declare function Jass_Native_CameraSetSourceNoiseEx(
+    real: mag,
+    velocity: real,
+    vertOnly: boolean
+): nothing;
+
+export declare function Jass_Native_CameraSetSmoothingFactor(
+    factor: real
+): nothing;
+
+export declare function Jass_Native_SetCineFilterTexture(
+    filename: string
+): nothing;
+
+export declare function Jass_Native_SetCineFilterBlendMode(
+    whichMode: blendmode
+): nothing;
+
+export declare function Jass_Native_SetCineFilterTexMapFlags(
+    whichFlags: texmapflags
+): nothing;
+
+export declare function Jass_Native_SetCineFilterStartUV(
+    minu: real,
+    minv: real,
+    maxu: real,
+    maxv: real
+): nothing;
+
+export declare function Jass_Native_SetCineFilterEndUV(
+    minu: real,
+    minv: real,
+    maxu: real,
+    maxv: real
+): nothing;
+
+export declare function Jass_Native_SetCineFilterStartColor(
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_SetCineFilterEndColor(
+    red: integer,
+    green: integer,
+    blue: integer,
+    alpha: integer
+): nothing;
+
+export declare function Jass_Native_SetCineFilterDuration(
+    duration: real,
+): nothing;
+
+
+export declare function Jass_Native_DisplayCineFilter(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_IsCineFilterDisplayed(): boolean;
+
+export declare function Jass_Native_SetCinematicScene(
+    portraitUnitId: integer,
+    color: playercolor,
+    speakerTitle: string,
+    text: string,
+    sceneDuration: real,
+    voiceoverDuration: real
+): nothing;
+
+export declare function Jass_Native_EndCinematicScene(): nothing;
+
+export declare function Jass_Native_ForceCinematicSubtitles(
+    flag: boolean
+): nothing;
+
+export declare function Jass_Native_GetCameraMargin(
+    whichMargin: integer
+): real;
+
+export declare function Jass_Constant_Native_GetCameraBoundMinX(): real;
+
+export declare function Jass_Constant_Native_GetCameraBoundMinY(): real;
+
+export declare function Jass_Constant_Native_GetCameraBoundMaxX(): real;
+
+export declare function Jass_Constant_Native_GetCameraBoundMaxY(): real;
+
+export declare function Jass_Constant_Native_GetCameraField(
+    whichField: camerafield
+): real;
+
+export declare function Jass_Constant_Native_GetCameraTargetPositionX(): real;
+
+export declare function Jass_Constant_Native_GetCameraTargetPositionY(): real;
+export declare function Jass_Constant_Native_GetCameraTargetPositionY(): real;
+
+export declare function Jass_Constant_Native_GetCameraTargetPositionLoc(): location;
+
+export declare function Jass_Constant_Native_GetCameraEyePositionX(): real;
+
+export declare function Jass_Constant_Native_GetCameraEyePositionY(): real;
+
+export declare function Jass_Constant_Native_GetCameraEyePositionZ(): real;
+
+export declare function Jass_Constant_Native_GetCameraEyePositionLoc(): location;
+
+/*Sound*/
+export declare function Jass_Native_NewSoundEnvironment(
+    environmentName: string
+): nothing;
+
+export declare function Jass_Native_CreateSound(
+    fileName: string,
+    looping: boolean,
+    is3D: boolean,
+    stopWhenOutToFrange: boolean,
+    fadeInRate: integer,
+    fadeOutRate: integer,
+    eaxSetting: string
+): sound;
+
+export declare function Jass_Native_CreateSoundFilenameWithLabel(
+    fileName: string,
+    looping: boolean,
+    is3D: boolean,
+    stopWhenOutToFrange: boolean,
+    fadeInRate: integer,
+    fadeOutRate: integer,
+    SLKEntryName: string
+): sound;
+
+export declare function Jass_Native_CreateSoundFromLabel(
+    soundLabel: string,
+    looping: boolean,
+    is3D: boolean,
+    stopWhenOutToFrange: boolean,
+    fadeInRate: integer,
+    fadeOutRate: integer,
+): sound;
+
+export declare function Jass_Native_CreateMIDISound(
+    soundLabel: string,
+    looping: boolean,
+    fadeInRate: integer,
+    fadeOutRate: integer,
+): sound;
+
+export declare function Jass_Native_SetSoundParamsFromLabel(
+    soundHandle: sound,
+    soundLabel: string
+): nothing;
+
+export declare function Jass_Native_SetSoundDistanceCutoff(
+    soundHandle: sound,
+    cutoff: real
+): nothing;
+
+export declare function Jass_Native_SetSoundChannel(
+    soundHandle: sound,
+    channel: integer
+): nothing;
+
+export declare function Jass_Native_SetSoundVolume(
+    soundHandle: sound,
+    volume: integer
+): nothing;
+
+export declare function Jass_Native_SetSoundPitch(
+    soundHandle: sound,
+    pitch: real
+): nothing;
+
+export declare function Jass_Native_SetSoundPlayPosition(
+    soundHandle: sound,
+    millisecs: integer
+): nothing;
+
+export declare function Jass_Native_SetSoundDistances(
+    soundHandle: sound,
+    minDist: real,
+    maxDist: real
+): nothing;
+
+export declare function Jass_Native_SetSoundConeAngles(
+    soundHandle: sound,
+    inside: real,
+    outside: real,
+    outsideVolume: integer
+): nothing;
+
+export declare function Jass_Native_SetSoundConeOrientation(
+    soundHandle: sound,
+    x: real,
+    y: real,
+    z: real
+): nothing;
+
+export declare function Jass_Native_SetSoundPosition(
+    soundHandle: sound,
+    x: real,
+    y: real,
+    z: real
+): nothing;
+
+export declare function Jass_Native_SetSoundVelocity(
+    soundHandle: sound,
+    x: real,
+    y: real,
+    z: real
+): nothing;
+
+export declare function Jass_Native_AttachSoundToUnit(
+    soundHandle: sound,
+    whichUnit: unit
+): nothing;
+
+export declare function Jass_Native_StartSound(
+    soundHandle: sound
+): nothing;
+
+export declare function Jass_Native_StopSound(
+    soundHandle: sound,
+    killWhenDone: boolean,
+    fadeOut: boolean
+): nothing;
+
+export declare function Jass_Native_KillSoundWhenDone(): nothing;
+
+export declare function Jass_Native_SetMapMusic(
+    musicName: string,
+    random: boolean,
+    index: integer
+): nothing;
+
+export declare function Jass_Native_ClearMapMusic(): nothing;
+
+export declare function Jass_Native_PlayMusic(
+    musicName: string
+): nothing;
+
+export declare function Jass_Native_PlayMusicEx(
+    musicName: string,
+    frommsecs: integer,
+    fadeinmsecs: integer
+): nothing;
+
+export declare function Jass_Native_StopMusic(
+    fadeOut: boolean
+): nothing;
+
+export declare function Jass_Native_ResumeMusic(): nothing;
+
+export declare function Jass_Native_PlayThematicMusic(
+    musicFileName: string
+): nothing;
+
+export declare function Jass_Native_PlayThematicMusicEx(
+    musicFileName: string,
+    frommsecs: integer
+): nothing;
+
+export declare function Jass_Native_EndThematicMusic(): nothing;
+
+export declare function Jass_Native_SetMusicVolume(
+    volume: integer
+): nothing;
+
+export declare function Jass_Native_SetMusicPlayPosition(
+    millisecs: integer
+): nothing;
+
+export declare function Jass_Native_SetThematicMusicPlayerPosition(
+    millisecs: integer
+): nothing;
+
+export declare function Jass_Native_SetSoundDuration(
+    soundHandle: sound,
+    duration: integer
+): nothing;
+
+export declare function Jass_Native_GetSoundDuration(
+    soundHandle: sound
+): integer;
+
+export declare function Jass_Native_GetSoundFileDuration(
+    musicFileName: string
+): integer;
+
+export declare function Jass_Native_VolumeGroupSetVolume(
+    vgroup: volumegroup,
+    scale: real
+): nothing;
+
+export declare function Jass_Native_VolumeGroupReset(): nothing;
+
+export declare function Jass_Native_GetSoundIsPlaying(
+    soundHandle: sound
+): boolean;
+
+export declare function Jass_Native_GetSoundIsLoading(
+    soundHandle: sound
+): boolean;
+
+export declare function Jass_Native_RegisterStackedSound(
+    soundHandle: sound,
+    byPosition: boolean,
+    rectWidth: real,
+    rectHeight: real
+): nothing;
+
+export declare function Jass_Native_UnregisterStackedSound(
+    soundHandle: sound,
+    byPosition: boolean,
+    rectWidth: real,
+    rectHeight: real
+): nothing;
+
+export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
 export declare function Jass_Native_();
